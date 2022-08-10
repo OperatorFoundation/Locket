@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Logging
 import SystemPackage
 
 import Gardener
@@ -181,6 +182,11 @@ public struct LocketConnection: TransmissionTypes.Connection
 
     func log(_ string: String)
     {
+        if Locket.print
+        {
+            print(string)
+        }
+
         if let fd = self.fd
         {
             do

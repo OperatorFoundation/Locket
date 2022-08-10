@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import Logging
 
 import Gardener
 
 public class Locket
 {
+    static public var print: Bool = false
+
     static public func getLogs() -> [UUID]
     {
         let base = File.applicationSupportDirectory()
